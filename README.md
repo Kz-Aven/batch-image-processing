@@ -1,16 +1,16 @@
-# Batch Image Processing | 批量处理图片
+# Batch Image Processing Toolbox | 批量处理图片
 
 **An AI agent skill for batch image conversion, resizing, compression, and GIF creation, powered by ImageMagick.**
 
 **用自然语言让 AI Agent 批量转换图片格式、统一尺寸、压缩图片、制作 GIF。基于本地 ImageMagick，无需记忆命令行参数。**
 
-[中文使用指南](#中文使用指南) · [English Guide](#english-guide) · [技能入口 / Skill](skills/batch-image-processing/SKILL.md) · [MIT License](LICENSE)
+[中文使用指南](#中文使用指南) · [English Guide](#english-guide) · [技能入口 / Skill](skills/batch-image-processing-toolbox/SKILL.md) · [MIT License](LICENSE)
 
 ## 中文使用指南
 
 ### 这是什么？
 
-`batch-image-processing` 是一个供 AI Agent 使用的图片处理技能。告诉 Agent 图片在哪里、想要什么结果，它就会检查环境，调用本地 ImageMagick 完成处理，并验证输出。
+`batch-image-processing-toolbox` 是一个供 AI Agent 使用的图片处理技能。告诉 Agent 图片在哪里、想要什么结果，它就会检查环境，调用本地 ImageMagick 完成处理，并验证输出。
 
 适合电商商品图、网站素材、设计交付、社交媒体图片和日常办公中的重复图片处理工作。它是技能指令和参考资料包，需要配合能够读取技能文件、访问本地图片并执行终端命令的 Agent 使用。
 
@@ -37,8 +37,8 @@
 向支持本地技能安装的 Agent 发送：
 
 ```text
-请从 https://github.com/Kz-Aven/batch-image-processing 安装批量处理图片技能。
-技能位于仓库的 skills/batch-image-processing/ 目录。
+请从 https://github.com/Kz-Aven/batch-image-processing-toolbox 安装批量处理图片技能。
+技能位于仓库的 skills/batch-image-processing-toolbox/ 目录。
 请将这个完整目录安装到当前 Agent 的技能目录，检查 SKILL.md 能否被识别。
 如果已有同名技能，请先比较版本，不要直接覆盖。
 ```
@@ -48,14 +48,14 @@
 **方式二：手动安装**
 
 1. 克隆本仓库，或通过 GitHub 的 **Code → Download ZIP** 下载并解压。
-2. 将仓库内整个 `skills/batch-image-processing/` 文件夹放到 Agent 的技能目录，保留所有子目录。
-3. 按客户端要求刷新技能列表或开启新会话，确认出现 `batch-image-processing`。
+2. 将仓库内整个 `skills/batch-image-processing-toolbox/` 文件夹放到 Agent 的技能目录，保留所有子目录。
+3. 按客户端要求刷新技能列表或开启新会话，确认出现 `batch-image-processing-toolbox`。
 
 ```sh
-git clone https://github.com/Kz-Aven/batch-image-processing.git
+git clone https://github.com/Kz-Aven/batch-image-processing-toolbox.git
 ```
 
-默认 Codex 目录下的入口应为 `~/.codex/skills/batch-image-processing/SKILL.md`。不要只安装 README，也不要把仓库根目录误当作技能目录。
+默认 Codex 目录下的入口应为 `~/.codex/skills/batch-image-processing-toolbox/SKILL.md`。不要只安装 README，也不要把仓库根目录误当作技能目录。
 
 ### 没装 ImageMagick，也能开始吗？
 
@@ -65,12 +65,12 @@ git clone https://github.com/Kz-Aven/batch-image-processing.git
 
 ### 使用示例
 
-支持 `$技能名` 的客户端可以用 `$batch-image-processing` 显式调用；其他客户端按其方式选择技能，再用自然语言描述任务。
+支持 `$技能名` 的客户端可以用 `$batch-image-processing-toolbox` 显式调用；其他客户端按其方式选择技能，再用自然语言描述任务。
 
 **批量 JPEG 转 PNG**
 
 ```text
-使用 $batch-image-processing，把 /path/to/photos 中的 JPG 和 JPEG 批量转成 PNG，
+使用 $batch-image-processing-toolbox，把 /path/to/photos 中的 JPG 和 JPEG 批量转成 PNG，
 保存到 /path/to/output，保留原图。
 ```
 
@@ -126,7 +126,7 @@ Agent 会报告输出位置、完成数量和失败项，并检查图片能否�
 
 ### What Is Batch Image Processing?
 
-`batch-image-processing` is an AI agent skill for editing individual images and automating repetitive image tasks with local ImageMagick commands. Tell your agent where your images are and what you need. It checks the environment, processes the files, and verifies the output.
+`batch-image-processing-toolbox` is an AI agent skill for editing individual images and automating repetitive image tasks with local ImageMagick commands. Tell your agent where your images are and what you need. It checks the environment, processes the files, and verifies the output.
 
 Use it for product photography, website assets, design handoffs, social media images, and everyday office work. This repository contains skill instructions and reference materials. It requires an agent that can read skill files, access your images, and run terminal commands.
 
@@ -154,8 +154,8 @@ Send this request to an agent that supports installing local skills:
 
 ```text
 Install the batch image processing skill from
-https://github.com/Kz-Aven/batch-image-processing.
-The skill is in skills/batch-image-processing/ inside the repository.
+https://github.com/Kz-Aven/batch-image-processing-toolbox.
+The skill is in skills/batch-image-processing-toolbox/ inside the repository.
 Install that complete directory into this agent's skill directory and verify
 that SKILL.md is recognized. If a skill with this name already exists,
 compare versions before replacing anything.
@@ -166,14 +166,14 @@ Skill discovery and installation paths vary by client. Codex can use `${CODEX_HO
 **Option 2: Install manually**
 
 1. Clone this repository, or select **Code → Download ZIP** on GitHub and extract it.
-2. Place the entire `skills/batch-image-processing/` folder in your agent's skill directory, including all subdirectories.
-3. Refresh skill discovery or start a new session as required by your client. Check that `batch-image-processing` is available.
+2. Place the entire `skills/batch-image-processing-toolbox/` folder in your agent's skill directory, including all subdirectories.
+3. Refresh skill discovery or start a new session as required by your client. Check that `batch-image-processing-toolbox` is available.
 
 ```sh
-git clone https://github.com/Kz-Aven/batch-image-processing.git
+git clone https://github.com/Kz-Aven/batch-image-processing-toolbox.git
 ```
 
-For a default Codex installation, the entry point should be `~/.codex/skills/batch-image-processing/SKILL.md`. Install the skill folder, not just the README or the repository root.
+For a default Codex installation, the entry point should be `~/.codex/skills/batch-image-processing-toolbox/SKILL.md`. Install the skill folder, not just the README or the repository root.
 
 ### Automatic ImageMagick Setup
 
@@ -183,12 +183,12 @@ Installation requires network access and may require administrator approval or i
 
 ### Usage Examples
 
-Use `$batch-image-processing` in clients that support explicit skill invocation. In other clients, select the skill using the client's supported mechanism and describe your task in natural language.
+Use `$batch-image-processing-toolbox` in clients that support explicit skill invocation. In other clients, select the skill using the client's supported mechanism and describe your task in natural language.
 
 **Convert JPEG images to PNG**
 
 ```text
-Use $batch-image-processing to convert all JPG and JPEG images in
+Use $batch-image-processing-toolbox to convert all JPG and JPEG images in
 /path/to/photos to PNG. Save them to /path/to/output and keep the originals.
 ```
 
@@ -248,10 +248,10 @@ Image conversion runs through local ImageMagick without a dedicated cloud image 
 
 | Resource / 资料 | Description / 说明 |
 | --- | --- |
-| [SKILL.md](skills/batch-image-processing/SKILL.md) | Agent instructions and automatic setup / 技能指令与自动安装流程 |
-| [Common Recipes](skills/batch-image-processing/references/recipes.md) | Common image processing workflows / 常用图片处理流程 |
-| [Batch Workflows](skills/batch-image-processing/references/batch.md) | Batch operations, filenames, and output handling / 批量执行、文件名与输出处理 |
-| [Official Reference Index](skills/batch-image-processing/references/official-index.md) | Offline tools, options, and topic references / 离线工具、选项与专题索引 |
+| [SKILL.md](skills/batch-image-processing-toolbox/SKILL.md) | Agent instructions and automatic setup / 技能指令与自动安装流程 |
+| [Common Recipes](skills/batch-image-processing-toolbox/references/recipes.md) | Common image processing workflows / 常用图片处理流程 |
+| [Batch Workflows](skills/batch-image-processing-toolbox/references/batch.md) | Batch operations, filenames, and output handling / 批量执行、文件名与输出处理 |
+| [Official Reference Index](skills/batch-image-processing-toolbox/references/official-index.md) | Offline tools, options, and topic references / 离线工具、选项与专题索引 |
 | [ImageMagick CLI](https://imagemagick.org/command-line-tools/) | Upstream command-line documentation / 上游官方命令行文档 |
 
 技能指令和操作示例目前以中文编写，附带官方参考保留英文原文。本 README 提供中英文使用指南。
@@ -260,12 +260,12 @@ The skill instructions and workflow examples are currently written in Chinese; b
 
 ## Feedback / 问题反馈
 
-通过 [GitHub Issues](https://github.com/Kz-Aven/batch-image-processing/issues) 反馈问题或提出使用场景。请附上操作系统、Agent 客户端、ImageMagick 版本、目标效果和错误信息；分享示例图片前移除敏感内容。
+通过 [GitHub Issues](https://github.com/Kz-Aven/batch-image-processing-toolbox/issues) 反馈问题或提出使用场景。请附上操作系统、Agent 客户端、ImageMagick 版本、目标效果和错误信息；分享示例图片前移除敏感内容。
 
-Use [GitHub Issues](https://github.com/Kz-Aven/batch-image-processing/issues) to report a problem or suggest a workflow. Include your operating system, agent client, ImageMagick version, expected result, and error message. Remove sensitive content before sharing sample images.
+Use [GitHub Issues](https://github.com/Kz-Aven/batch-image-processing-toolbox/issues) to report a problem or suggest a workflow. Include your operating system, agent client, ImageMagick version, expected result, and error message. Remove sensitive content before sharing sample images.
 
 ## License / 许可证
 
-本仓库原创内容采用 [MIT License](LICENSE)。附带的 ImageMagick 官方文档保留其原有版权声明，并适用 [ImageMagick License](skills/batch-image-processing/references/official/license.html)。本项目是独立的 Agent 技能项目。
+本仓库原创内容采用 [MIT License](LICENSE)。附带的 ImageMagick 官方文档保留其原有版权声明，并适用 [ImageMagick License](skills/batch-image-processing-toolbox/references/official/license.html)。本项目是独立的 Agent 技能项目。
 
-Original content in this repository is distributed under the [MIT License](LICENSE). Bundled ImageMagick documentation retains its original notices and is subject to the [ImageMagick License](skills/batch-image-processing/references/official/license.html). This is an independent agent skill project.
+Original content in this repository is distributed under the [MIT License](LICENSE). Bundled ImageMagick documentation retains its original notices and is subject to the [ImageMagick License](skills/batch-image-processing-toolbox/references/official/license.html). This is an independent agent skill project.
